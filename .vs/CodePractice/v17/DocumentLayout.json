@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|c:\\users\\colle\\onedrive\\desktop\\web-dev\\codepractice\\codepractice\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|c:\\users\\colle\\onedrive\\desktop\\web-dev\\codepractice\\codepractice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-07-09T16:01:44.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
