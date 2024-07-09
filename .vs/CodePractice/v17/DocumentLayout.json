@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|c:\\users\\colle\\onedrive\\desktop\\web-dev\\codepractice\\codepractice\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|solutionrelative:index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|c:\\users\\colle\\onedrive\\desktop\\web-dev\\codepractice\\codepractice\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|solutionrelative:index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|c:\\users\\colle\\onedrive\\desktop\\web-dev\\codepractice\\codepractice\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{29540917-DF5B-4700-9152-CB72BC660A3D}|CodePractice.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -18,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 489,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\index.js",
+              "RelativeDocumentMoniker": "index.js",
+              "ToolTip": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\index.js",
+              "RelativeToolTip": "index.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-09T16:12:39.556Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -47,6 +68,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "index.ts",
+              "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\index.ts",
+              "RelativeDocumentMoniker": "index.ts",
+              "ToolTip": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\index.ts",
+              "RelativeToolTip": "index.ts",
+              "ViewState": "AQIAACMAAAAAAAAAAAAUwD4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-07-09T16:09:27.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -59,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\colle\\OneDrive\\Desktop\\WEB-DEV\\CodePractice\\CodePractice\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
