@@ -124,4 +124,18 @@ export function validBracesRecursion(braces: string): boolean {
     return validBracesRecursion(braces);
 }
 
+//reverse working from 3 int to n int
+function tribonacci(signature: number[], n: number): number[] {
+    if (n === 0) return [];
+    if (n <= 3) return signature.slice(0, n);
+    for (let i = 3; i < n; i++) {
+        signature.push(signature[i - 1] + signature[i - 2] + signature[i - 3]);
+    }
+    return signature;
+}
+ //forwrad working from 0 int to n int
+export function tribonacci2(s: Array<number>, n: number): number[] {
+    for (let i = 0; s.length < n; i++) s.push(s[i] + s[i + 1] + s[i + 2]);
+    return s.slice(0, n);
+}
 //testing changes to see if it works
