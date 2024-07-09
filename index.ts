@@ -60,4 +60,26 @@ const isIsogram = (str: string): boolean => {
     return new Set(str.toLowerCase()).size === str.length;
 }
 
+export const nbYear = (p0: number, percent: number, aug: number, p: number): number => {
+    let years: number = 0;
+    while (p0 < p) {
+        p0 += p0 * percent / 100 + aug;
+        years++;
+    }
+    return years;
+}
+
+const findUniq = (arr: number[]): number => {
+    const [a, b, c] = arr.slice(0, 3);
+    return arr.filter((num) => num !== (a === b ? a : c))[0];
+}
+
+const findEvenIndex = (arr: number[]): number => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.slice(0, i).reduce((acc, num) => acc + num, 0) === arr.slice(i + 1).reduce((acc, num) => acc + num, 0)) {
+            return i;
+        }
+    }
+    return -1;
+}
 //testing changes to see if it works

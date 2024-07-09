@@ -29,6 +29,18 @@ int digital_root(int n) => n < 10 ? n : digital_root(n.ToString().Sum(x => x - '
 
 string isIsogram(string str) => str.ToLower().Distinct().Count() == str.Length ? "Isogram" : "Not Isogram";
 
+int findEvenIndex(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr.Take(i).Sum() == arr.Skip(i + 1).Sum())
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
 
 
 Console.WriteLine(shortLongShort("abc", "def")); // abcdefabc
@@ -44,3 +56,5 @@ Console.WriteLine(likes(new string[] { "Alex", "Jacob", "Mark", "Max" })); // Al
 Console.WriteLine(digital_root(942)); // 6
 
 Console.WriteLine(isIsogram("Dermatoglyphics")); // Isogram
+
+Console.WriteLine(findEvenIndex(new int[] { 1, 2, 3, 4, 3, 2, 1 })); // 3

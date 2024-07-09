@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.likes = void 0;
+exports.nbYear = exports.likes = void 0;
 exports.shortLongShort = shortLongShort;
 exports.toJadenCase = toJadenCase;
 console.log('Hello, world!');
@@ -53,5 +53,28 @@ const digitalRoot = (n) => {
 };
 const isIsogram = (str) => {
     return new Set(str.toLowerCase()).size === str.length;
+};
+const nbYear = (p0, percent, aug, p) => {
+    let years = 0;
+    while (p0 < p) {
+        p0 += p0 * percent / 100 + aug;
+        years++;
+    }
+    return years;
+};
+exports.nbYear = nbYear;
+
+const findUniq = (arr) => {
+    const [a, b, c] = arr.slice(0, 3);
+    return arr.filter((num) => num !== (a === b ? a : c))[0];
+};
+
+const findEvenIndex = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.slice(0, i).reduce((acc, num) => acc + num, 0) === arr.slice(i + 1).reduce((acc, num) => acc + num, 0)) {
+            return i;
+        }
+    }
+    return -1;
 };
 //testing changes to see if it works
