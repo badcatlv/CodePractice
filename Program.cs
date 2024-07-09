@@ -27,7 +27,22 @@ string likes(string[] names)
 
 int digital_root(int n) => n < 10 ? n : digital_root(n.ToString().Sum(x => x - '0'));
 
-string isIsogram(string str) => str.ToLower().Distinct().Count() == str.Length ? "Isogram" : "Not Isogram";
+//string isIsogram(string str) => str.ToLower().Distinct().Count() == str.Length ? "Isogram" : "Not Isogram";
+
+string isIsogram(string str)
+{
+    for (int i = 0; i < str.Length; i++)
+    {
+        for (int j = i + 1; j < str.Length; j++)
+        {
+            if (char.ToLower(str[i]) == char.ToLower(str[j]))
+            {
+                return "Not Isogram";
+            }
+        }
+    }
+    return "Isogram";
+}
 
 int findEvenIndex(int[] arr)
 {
@@ -39,6 +54,33 @@ int findEvenIndex(int[] arr)
         }
     }
     return -1;
+}
+
+string validBraces2(string braces)
+{
+    string[] open = { "(", "{", "[" };
+    string[] close = { ")", "}", "]" };
+    string[] stack = new string[braces.Length];
+    int index = 0;
+    for (int i = 0; i < braces.Length; i++)
+    {
+        if (open.Contains(braces[i].ToString()))
+        {
+            stack[index++] = braces[i].ToString();
+        }
+        else if (close.Contains(braces[i].ToString()))
+        {
+            if (index == 0)
+            {
+                return "false";
+            }
+            if (open[Array.IndexOf(close, braces[i].ToString())] != stack[--index])
+            {
+                return "false";
+            }
+        }
+    }
+    return index == 0 ? "true" : "false";
 }
 
 
@@ -58,3 +100,10 @@ Console.WriteLine(digital_root(942)); // 6
 Console.WriteLine(isIsogram("Dermatoglyphics")); // Isogram
 
 Console.WriteLine(findEvenIndex(new int[] { 1, 2, 3, 4, 3, 2, 1 })); // 3
+
+Console.WriteLine(validBraces("()")); // true
+Console.WriteLine(validBraces("(){}[]")); // true
+Console.WriteLine(validBraces("([{}])")); // true
+Console.WriteLine(validBraces("({})[({})]")); // true
+Console.WriteLine(validBraces("(({{[[]]}}))")); // true
+Console.WriteLine(validBraces("{}{})([]")); // 

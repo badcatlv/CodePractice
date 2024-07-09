@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.nbYear = exports.likes = void 0;
 exports.shortLongShort = shortLongShort;
 exports.toJadenCase = toJadenCase;
+exports.validBraces2 = validBraces2;
 console.log('Hello, world!');
 let age = 30;
 function shortLongShort(a, b) {
@@ -63,18 +64,39 @@ const nbYear = (p0, percent, aug, p) => {
     return years;
 };
 exports.nbYear = nbYear;
-
 const findUniq = (arr) => {
     const [a, b, c] = arr.slice(0, 3);
     return arr.filter((num) => num !== (a === b ? a : c))[0];
 };
-
-const findEvenIndex = (arr) => {
+function findEvenIndex(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (arr.slice(0, i).reduce((acc, num) => acc + num, 0) === arr.slice(i + 1).reduce((acc, num) => acc + num, 0)) {
             return i;
         }
     }
     return -1;
-};
+}
+function validBraces(braces) {
+    while (/\(\)|\[\]|\{\}/.test(braces)) {
+        braces = braces.replace(/\(\)|\[\]|\{\}/, '');
+    }
+    return !braces.length;
+}
+function validBraces2(braces) {
+    const stack = [];
+    const start = ['(', '[', '{'];
+    const end = [')', ']', '}'];
+    for (let index = 0; index < braces.length; index++) {
+        const char = braces[index];
+        if (start.indexOf(char) > -1) {
+            stack.push(char);
+            continue;
+        }
+        if (stack.pop() === start[end.indexOf(char)]) {
+            continue;
+        }
+        return false;
+    }
+    return stack.length === 0;
+}
 //testing changes to see if it works

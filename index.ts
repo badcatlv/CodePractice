@@ -74,7 +74,7 @@ const findUniq = (arr: number[]): number => {
     return arr.filter((num) => num !== (a === b ? a : c))[0];
 }
 
-const findEvenIndex = (arr: number[]): number => {
+function findEvenIndex (arr: number[]): number {
     for (let i = 0; i < arr.length; i++) {
         if (arr.slice(0, i).reduce((acc, num) => acc + num, 0) === arr.slice(i + 1).reduce((acc, num) => acc + num, 0)) {
             return i;
@@ -82,4 +82,36 @@ const findEvenIndex = (arr: number[]): number => {
     }
     return -1;
 }
+
+function validBraces(braces: string): boolean {
+    while (/\(\)|\[\]|\{\}/.test(braces)) {
+        braces = braces.replace(/\(\)|\[\]|\{\}/, '');
+    }
+    return !braces.length;
+}
+
+export function validBraces2(braces: string): boolean {
+    const stack: string[] = [];
+    const start = ['(', '[', '{'];
+    const end = [')', ']', '}'];
+
+    for (let index = 0; index < braces.length; index++) {
+        const char = braces[index];
+
+        if (start.indexOf(char) > -1) {
+            stack.push(char);
+            continue;
+        }
+
+        if (stack.pop() === start[end.indexOf(char)]) {
+            continue;
+        }
+
+        return false;
+    }
+
+    return stack.length === 0;
+}
+
+
 //testing changes to see if it works
