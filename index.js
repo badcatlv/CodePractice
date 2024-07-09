@@ -4,6 +4,7 @@ exports.nbYear = exports.likes = void 0;
 exports.shortLongShort = shortLongShort;
 exports.toJadenCase = toJadenCase;
 exports.validBraces2 = validBraces2;
+exports.validBracesRecursion = validBracesRecursion;
 console.log('Hello, world!');
 let age = 30;
 function shortLongShort(a, b) {
@@ -98,5 +99,18 @@ function validBraces2(braces) {
         return false;
     }
     return stack.length === 0;
+}
+function validBracesRecursion(braces) {
+    if (braces.length % 2 !== 0)
+        return false;
+    let count = braces.length;
+    braces = braces.replace('()', '');
+    braces = braces.replace('[]', '');
+    braces = braces.replace('{}', '');
+    if (braces.length === 0)
+        return true;
+    if (braces.length === count)
+        return false;
+    return validBracesRecursion(braces);
 }
 //testing changes to see if it works

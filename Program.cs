@@ -56,7 +56,7 @@ int findEvenIndex(int[] arr)
     return -1;
 }
 
-string validBraces2(string braces)
+string validBraces(string braces)
 {
     string[] open = { "(", "{", "[" };
     string[] close = { ")", "}", "]" };

@@ -113,5 +113,15 @@ export function validBraces2(braces: string): boolean {
     return stack.length === 0;
 }
 
+export function validBracesRecursion(braces: string): boolean {
+    if (braces.length % 2 !== 0) return false;
+    let count = braces.length;
+    braces = braces.replace('()', '');
+    braces = braces.replace('[]', '');
+    braces = braces.replace('{}', '');
+    if (braces.length === 0) return true;
+    if (braces.length === count) return false;
+    return validBracesRecursion(braces);
+}
 
 //testing changes to see if it works
