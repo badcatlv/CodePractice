@@ -133,9 +133,14 @@ function tribonacci(signature: number[], n: number): number[] {
     }
     return signature;
 }
- //forwrad working from 0 int to n int
+ //forward working from 0 int to n int
 export function tribonacci2(s: Array<number>, n: number): number[] {
     for (let i = 0; s.length < n; i++) s.push(s[i] + s[i + 1] + s[i + 2]);
     return s.slice(0, n);
 }
-//testing changes to see if it works
+
+const high = (x: string): string => {
+    const words = x.split(' ');
+    const scores = words.map((word) => word.split('').reduce((acc, char) => acc + char.charCodeAt(0) - 96, 0));
+    return words[scores.indexOf(Math.max(...scores))];
+}

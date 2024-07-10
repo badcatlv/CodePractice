@@ -125,10 +125,14 @@ function tribonacci(signature, n) {
     }
     return signature;
 }
-//forwrad working from 0 int to n int
+//forward working from 0 int to n int
 function tribonacci2(s, n) {
     for (let i = 0; s.length < n; i++)
         s.push(s[i] + s[i + 1] + s[i + 2]);
     return s.slice(0, n);
 }
-//testing changes to see if it works
+const high = (x) => {
+    const words = x.split(' ');
+    const scores = words.map((word) => word.split('').reduce((acc, char) => acc + char.charCodeAt(0) - 96, 0));
+    return words[scores.indexOf(Math.max(...scores))];
+};

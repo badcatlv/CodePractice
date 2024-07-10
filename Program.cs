@@ -83,6 +83,41 @@ string validBraces(string braces)
     return index == 0 ? "true" : "false";
 }
 
+int[] tribonacci(int[] arr, int n)
+{
+    if (n == 0)
+    {
+        return [];
+    }
+    else if (n == 1)
+    {
+        return [arr[0]];
+    }
+    else if (n == 2)
+    {
+        return [arr[0], arr[1]];
+    }
+    else
+    {
+        int[] result = new int[n];
+        result[0] = arr[0];
+        result[1] = arr[1];
+        result[2] = arr[2];
+        for (int i = 3; i < n; i++)
+        {
+            result[i] = result[i - 1] + result[i - 2] + result[i - 3];
+        }
+        return result;
+    }
+    }
+
+
+string high (string s)
+{
+    string[] words = s.Split(' ');
+    int[] scores = words.Select(x => x.Sum(y => y - 'a' + 1)).ToArray();
+    return words[Array.IndexOf(scores, scores.Max())];
+}
 
 
 Console.WriteLine(shortLongShort("abc", "def")); // abcdefabc
@@ -106,4 +141,10 @@ Console.WriteLine(validBraces("(){}[]")); // true
 Console.WriteLine(validBraces("([{}])")); // true
 Console.WriteLine(validBraces("({})[({})]")); // true
 Console.WriteLine(validBraces("(({{[[]]}}))")); // true
-Console.WriteLine(validBraces("{}{})([]")); // 
+Console.WriteLine(validBraces("{}{})([]")); // false
+
+Console.WriteLine(tribonacci(new int[] { 1, 1, 1 }, 10)); // 1, 1, 1, 3, 5, 9, 17, 31, 57, 105
+
+Console.WriteLine(high("today is a day to consider the past")); // consider
+
+Console.WriteLine(high("z b a ")); // z
