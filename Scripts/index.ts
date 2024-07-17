@@ -144,3 +144,15 @@ const high = (x: string): string => {
     const scores = words.map((word) => word.split('').reduce((acc, char) => acc + char.charCodeAt(0) - 96, 0));
     return words[scores.indexOf(Math.max(...scores))];
 }
+
+export function rgb(r: number, g: number, b: number): string {
+
+    const toHex = (num: number): string => {
+        if (num < 0) return '00';
+        if (num > 255) return 'FF';
+        return num.toString(16).padStart(2, '0').toUpperCase();
+    }
+
+    return [r, g, b].map((num) => toHex(num)).join('');
+};
+

@@ -119,6 +119,11 @@ string high (string s)
     return words[Array.IndexOf(scores, scores.Max())];
 }
 
+string rgb(int r, int g, int b)
+{
+    return string.Join("", new int[] { r, g, b }.Select(x => x < 0 ? "00" : x > 255 ? "FF" : x.ToString("X2")));
+}
+
 
 Console.WriteLine(shortLongShort("abc", "def")); // abcdefabc
 
@@ -148,3 +153,11 @@ Console.WriteLine(tribonacci(new int[] { 1, 1, 1 }, 10)); // 1, 1, 1, 3, 5, 9, 1
 Console.WriteLine(high("today is a day to consider the past")); // consider
 
 Console.WriteLine(high("z b a ")); // z
+
+Console.WriteLine(rgb(255, 255, 255)); // FFFFFF
+
+Console.WriteLine(rgb(255, 255, 300)); // FFFFFF
+
+Console.WriteLine(rgb(0, 0, 0)); // 000000
+
+Console.WriteLine(rgb(255, 16, 9)); // FF1009
